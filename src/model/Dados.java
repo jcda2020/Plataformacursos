@@ -28,6 +28,7 @@ while(resultado.next()) {
 			
 			String cpf = resultado.getString("cpf");
 			String nome = resultado.getString("nome");
+			//tipo date no sql
 			Date nascimento = resultado.getDate("data_nascimento");
 			String sexo = resultado.getString("sexo");
 			
