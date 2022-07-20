@@ -16,7 +16,7 @@ public class Dados {
 static String query;
 	
 	public static void showDados() throws SQLException, ParseException {
-		query = "SELECT * FROM alunos";
+		query = "SELECT * FROM alunos join sexo";
 		Connection conexao = FactoryConnection.getConnection();
         Statement stmt = conexao.createStatement();
         
@@ -39,6 +39,8 @@ while(resultado.next()) {
 			System.out.println("Data de nascimento: " + data.format(nascimento));
 			System.out.println("Sexo: " + sexo);
 		} 
+stmt.close();
+conexao.close();
 	}
 	
 	

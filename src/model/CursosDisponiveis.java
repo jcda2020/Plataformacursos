@@ -32,6 +32,7 @@ public class CursosDisponiveis {
 			System.out.println("Título do curso: " + titulo);		
 			
 		}
+		stmt.close();
 		conexao.close();	
 	}	
 	public static List<String> carregaCursos(){		
