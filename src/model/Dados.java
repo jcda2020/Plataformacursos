@@ -16,7 +16,7 @@ public class Dados {
 static String query;
 	
 	public static void showDados() throws SQLException, ParseException {
-		query = "SELECT * FROM alunos join sexo";
+		query = "SELECT * FROM alunos";
 		Connection conexao = FactoryConnection.getConnection();
         Statement stmt = conexao.createStatement();
         
@@ -30,9 +30,7 @@ while(resultado.next()) {
 			String nome = resultado.getString("nome");
 			//tipo date no sql
 			Date nascimento = resultado.getDate("data_nascimento");
-			String sexo = resultado.getString("sexo");
-			
-			
+			String sexo = resultado.getString("sexo");			
 		
 			System.out.println("CPF: " + cpf);
 			System.out.println("Nome: " + nome);
